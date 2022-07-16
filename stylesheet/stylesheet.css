@@ -10,10 +10,33 @@ html,body{
 
 body{
     display: flex;
+    background-color: #1b1923;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .background{
     background: no-repeat center/cover url("../img/background.jpg"); 
     flex: 0 0 600px;
-    height: max(500px,100vh);
+    height: max(600px,100vh);
+}
+
+.form-box{
+    flex: 0 0 max(100%,800px);
+    height: 700px;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+.form-box p{
+    width: 800px;   
+    margin: 0 40px;
+    font-size: 22px;
+}
+
+.form-box .form-container{
+    height: 300px;
+    margin-top: 60px;
+    background-color: #242130;
+    border-radius: 10px;
 }
