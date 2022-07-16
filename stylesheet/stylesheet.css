@@ -21,22 +21,70 @@ body{
     height: max(600px,100vh);
 }
 
-.form-box{
+.right-container{
     flex: 0 0 max(100%,800px);
     height: 700px;
     align-self: center;
     box-sizing: border-box;
 }
 
-.form-box p{
-    width: 800px;   
+.right-container p{
+    width: 800px;
     margin: 0 40px;
     font-size: 22px;
 }
 
-.form-box .form-container{
+.right-container .form-box{
     height: 300px;
     margin-top: 60px;
     background-color: #242130;
     border-radius: 10px;
+}
+
+.right-container .form-box .form-container{
+    width: 800px;
+    height: 100%;
+    padding: 20px 40px;
+}
+
+.form-container h1{
+    font-size: 22px;
+}
+
+.form-container p{
+    display: inline-block;
+    width: max-content;
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-container p label{
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.form-container input{
+    appearance: none;
+    background-color: #1b1923;
+    border-color: rgba(255, 255, 255, 0.534);
+    border-style: ridge;
+    border-width: 1px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 15px;
+    width: 200px;
+    height: 25px;
+}
+
+.form-container input:focus{
+    appearance: none;
+    border-color: white;
+    box-shadow: 3px 2px 5px 2px rgba(255, 255, 255, 0.338);
+    outline: none;
+}
+
+.form-container p.right{
+    margin-left: 70px;
 }
