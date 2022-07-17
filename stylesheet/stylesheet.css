@@ -11,12 +11,16 @@
     margin: 0;
 }
 
-html,body{
+/* html,body{
     width: 100vw;
     height: 100vh;
-}
+    box-sizing: border-box;
+} */
 
 body{
+    box-sizing: border-box;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     background-color: #1b1923;
     color: white;
@@ -24,9 +28,10 @@ body{
 }
 
 .background{
+    position: relative;
     background: no-repeat center/cover url("../img/background.jpg"); 
     flex: 0 0 600px;
-    height: max(600px,100vh);
+    height: max(700px,100vh);
 }
 
 .logo-layer{
@@ -63,15 +68,25 @@ body{
 
 }
 
+.background .footer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1.5%;
+
+}
 
 .right-container{
-    flex: 0 0 max(100%,800px);
+    flex: 0 1 auto;
+    width: 100%;
     height: 700px;
     align-self: center;
     box-sizing: border-box;
 }
 
-.right-container p{
+.right-container>p{
     width: 800px;
     margin: 0 40px;
     font-size: 22px;
@@ -86,9 +101,10 @@ body{
 
 .right-container .form-box .form-container{
     width: 800px;
-    height: 100%;
+    height: 120%;
     padding: 20px 40px;
 }
+
 
 .form-container h1{
     font-size: 22px;
@@ -125,10 +141,27 @@ body{
 .form-container input:focus{
     appearance: none;
     border-color: white;
-    /* box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.338); */
     outline: none;
 }
 
 .form-container p.right{
     margin-left: 70px;
+}
+
+.form-container button{
+    appearance: none;
+    color: white;
+    margin-top: 80px;
+    background-color:#3484a4;
+    border-width: 0px;
+    width: 180px;
+    height: 40px;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.form-container button:hover{
+    background-color:#2b6e88;
 }
