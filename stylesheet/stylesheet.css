@@ -165,3 +165,26 @@ body{
 .form-container button:hover{
     background-color:#2b6e88;
 }
+
+.login-desc{
+    display: block;
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.login{
+    color:#45b6e2;
+    text-decoration: none;
+}
+
+.login:hover{
+    color: #3484a4;
+}
+
+.photo-credit,.unsplash{
+    color: white;
+}
+
+.footer a{
+    margin: 0 5px;
+}
