@@ -9,6 +9,7 @@
 *{
     padding: 0;
     margin: 0;
+    --input-background: #34304a;
 }
 
 /* html,body{
@@ -71,9 +72,7 @@ body{
 .background .footer{
     position: absolute;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     bottom: 1.5%;
 
 }
@@ -142,6 +141,7 @@ body{
     appearance: none;
     border-color: white;
     outline: none;
+    background-color:var(--input-background);
 }
 
 .form-container p.right{
@@ -185,6 +185,10 @@ body{
     color: white;
 }
 
-.footer a{
-    margin: 0 5px;
+input:focus:invalid,input:invalid{
+    border-color: crimson;
+}
+
+input:not(:placeholder-shown):valid,input:not(:placeholder-shown):valid:focus{
+    border-color: rgb(99, 216, 99);
 }
