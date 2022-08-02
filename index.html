@@ -30,33 +30,35 @@
                     <div class="form-row">
                         <p>
                             <label for="first-name">FIRST NAME</label>
-                            <input id="first-name" name="first-name" placeholder="John">
+                            <input id="first-name" name="first-name" placeholder="John" required>
                         </p>
                         <p class="right">
                             <label for="last-name">LAST NAME</label>
-                            <input id="last-name" name="last-name" placeholder="Doe">
+                            <input id="last-name" name="last-name" placeholder="Doe" required>
                         </p>
                     </div>
                     <div class="form-row">
                         <p>
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" placeholder="johndoe1234@abc.com">
+                            <input type="email" id="email" name="email" placeholder="johndoe1234@abc.com" required>
                             <span></span>
                         </p>
                         <p class="right">
                             <label for="phone-number">PHONE NUMBER</label>
-                            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="9010110111">
+                            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="9010110111" required>
                             <span></span>
                         </p>
                     </div> 
                     <div class="form-row">
                         <p>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password" placeholder="">
+                            <label for="password">PASSWORD</label> 
+                            <input type="password" id="password" name="password" placeholder="" required>
+                            <span></span>
                         </p>
                         <p class="right">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="confirm-password" placeholder="">
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="" required>
+                            <span></span>
                         </p>
                     </div>
                     <button type="submit">Create Account</button>

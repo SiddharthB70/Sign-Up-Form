@@ -186,32 +186,30 @@ body{
     color: white;
 }
 
-input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)){
-    border-color: crimson;
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):invalid:is(:focus,:not(:focus)),.password-notmatched{
+    border-color: crimson !important;;
 }
 
-input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)){
-    border-color: rgb(99, 216, 99);
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)),.password-matched{
+    border-color: rgb(99, 216, 99) !important;
 }
 
 input + span{
     position: relative;
 }
 
-input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)) + span::after{
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):invalid:is(:focus,:not(:focus)) + span::after,.password-notmatched + span::after{
     content: "✘";
-    color: crimson;
+    color: crimson; 
 }
 
 input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)) + 
-span::after{
+span::after,.password-matched + span::after{
     content: "✔";
     color:rgb(99, 216, 99);
 }
 
-input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)) + span::after,
-input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)) + 
-span::after{
+input:is([type="email"],[type="tel"],[type="password"]) + span::after{
     position: absolute;
     top: 0px;
     left: -20px;
