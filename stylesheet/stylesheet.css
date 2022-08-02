@@ -135,6 +135,7 @@ body{
     width: 200px;
     height: 25px;
     padding-left: 10px;
+    padding-right: 22px;
 }
 
 .form-container input:focus{
@@ -185,10 +186,34 @@ body{
     color: white;
 }
 
-input:focus:invalid,input:invalid{
+input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)){
     border-color: crimson;
 }
 
-input:not(:placeholder-shown):valid,input:not(:placeholder-shown):valid:focus{
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)){
     border-color: rgb(99, 216, 99);
+}
+
+input + span{
+    position: relative;
+}
+
+input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)) + span::after{
+    content: "✘";
+    color: crimson;
+}
+
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)) + 
+span::after{
+    content: "✔";
+    color:rgb(99, 216, 99);
+}
+
+input:is([type="email"],[type="tel"],[type="password"]):invalid:is(:focus,:not(:focus)) + span::after,
+input:is([type="email"],[type="tel"],[type="password"]):not(:placeholder-shown):valid:is(:focus,:not(:focus)) + 
+span::after{
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
 }
